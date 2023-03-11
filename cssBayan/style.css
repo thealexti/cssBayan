@@ -7,7 +7,78 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 25px;
-    margin: 2% 25%;
+    margin: 2% 20%;
+}
+
+@media screen and (max-width: 480px) {
+    .accordion label::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        display: flex;
+        justify-content: center;
+        float: right;
+        transition: opacity 0.5s ease-out;
+        opacity: 1;
+    }
+
+    .accordion {
+        font-size: 1rem;
+    }
+
+    .accordion label::after {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .accordion label::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        display: flex;
+        justify-content: center;
+        float: right;
+        transition: opacity 0.5s ease-out;
+        opacity: 1;
+    }
+
+    .accordion {
+        font-size: 1.5rem;
+    }
+
+    .accordion label::after {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .accordion label::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        display: flex;
+        justify-content: center;
+        float: right;
+        transition: opacity 0.5s ease-out;
+        opacity: 0;
+    }
+
+    .accordion:hover label::after {
+        opacity: 1;
+    }
+
+    .accordion_content label::after {
+        opacity: 1;
+    }
+
+    .accordion {
+        font-size: 2rem;
+    }
+
+    .accordion label::after {
+        font-size: 2rem;
+    }
 }
 
 .accordion h1 {
@@ -36,6 +107,10 @@ body {
     box-shadow: 10px 5px 5px rgb(69, 67, 67);
 }
 
+.accordion_img:hover {
+    cursor: pointer;
+}
+
 .accordion .accordion_content .accordion_content_inner {
     max-height: 0;
     overflow: hidden;
@@ -43,25 +118,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.accordion label::after {
-    content: "\276F";
-    width: 1em;
-    height: 1em;
-    display: flex;
-    justify-content: center;
-    float: right;
-    transition: opacity 0.5s ease-out;
-    opacity: 0;
-}
-
-.accordion:hover label::after {
-    opacity: 1;
-}
-
-.accordion_content label::after {
-    opacity: 1;
 }
 
 .accordion input:checked+label::after {
