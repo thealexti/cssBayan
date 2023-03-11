@@ -1,9 +1,18 @@
+body {
+    margin: 0;
+}
+
 .accordion {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1em;
-    padding: 2% 25%;
+    gap: 25px;
+    margin: 2% 25%;
+}
+
+.accordion h1 {
+    margin-left: 20px;
+    font-size: calc(24px + 16 * (100vw / 1920));
 }
 
 .accordion label {
@@ -11,7 +20,7 @@
     cursor: pointer;
     padding-left: 3%;
     background-color: rgb(220, 238, 239);
-    box-shadow: 10px 5px 5px rgb(236, 223, 223);
+    box-shadow: 10px 5px 5px rgb(69, 67, 67);
     border-radius: 15px;
     font-size: calc(24px + 16 * (100vw / 1920));
 }
@@ -23,6 +32,8 @@
     display: block;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(69, 67, 67);
 }
 
 .accordion .accordion_content .accordion_content_inner {
@@ -41,7 +52,16 @@
     display: flex;
     justify-content: center;
     float: right;
-    transition: transform .5s ease-out;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+.accordion:hover label::after {
+    opacity: 1;
+}
+
+.accordion_content label::after {
+    opacity: 1;
 }
 
 .accordion input:checked+label::after {
@@ -50,7 +70,8 @@
 
 .accordion input:hover+label::after {
     transform: rotate(90deg);
-    transition: transform .5s ease-out;
+    transition: transform 0.5s ease-out;
+    opacity: 1;
 }
 
 .accordion input:not(:checked):hover+label+.accordion_content .accordion_content_inner {
