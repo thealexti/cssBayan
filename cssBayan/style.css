@@ -1,0 +1,31 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 30%;
+}
+
+.accordion label {
+    display: block;
+    cursor: pointer;
+    border-top: 1px solid gray;
+}
+
+.accordion_img {
+    max-width: 15em;
+    max-height: 20em;
+}
+
+.accordion label:hover::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+}
+
+.accordion .accordion_content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
