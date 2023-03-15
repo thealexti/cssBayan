@@ -1,130 +1,131 @@
 * {
-    transition: all .3s;
-  }
-  
-  .accordion_img {
-    display: block;
-    max-width: 100%;
-    width: 100%;
-  }
-  
-  .accordion {
-    margin: 0 auto;
-    max-width: 50%;
-    border-radius: 1rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  transition: all .3s;
+}
 
-  .accordion_header {
-    margin-left: 1rem;
-  }
-  
+.accordion_img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.accordion {
+  margin: 0 auto;
+  max-width: 50%;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.accordion_header {
+  margin-left: 1rem;
+}
+
+.accordion_article {
+  margin-bottom: .2rem;
+}
+
+.accordion_article:hover>.accordion_title .accordion_icon,
+.accordion_input:checked~.accordion_title .accordion_icon {
+  transform: rotate(45deg);
+}
+
+.accordion_article:hover>.accordion_title>.accordion_content,
+.accordion_input:checked~.accordion_title>.accordion_content {
+  height: 30vh;
+  opacity: 1;
+}
+
+.accordion_article:hover>.accordion_title>.accordion_content img,
+.accordion_input:checked~.accordion_title>.accordion_content img {
+  height: 100%;
+}
+
+.accordion_input {
+  appearance: none;
+  display: none;
+}
+
+.accordion_input:checked~.accordion_title {
+  color: rgb(22, 21, 21);
+}
+
+.accordion_title {
+  color: rgb(191, 24, 213);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.accordion_subtitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: 20rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: calc(24px + 16 * (100vw / 1920));
+}
+
+.accordion_icon {
+  visibility: hidden;
+  width: 1rem;
+}
+
+.accordion_content {
+  height: 0;
+  margin: .3rem;
+  opacity: 0;
+}
+
+.accordion_content img {
+  height: 0;
+  margin: 0 auto;
+  width: 30rem;
+}
+
+@media (hover: hover) {
   .accordion:hover .accordion_icon,
   .accordion:hover .accordion_title {
     color: black;
     visibility: visible;
   }
-  
-  .accordion_article {
-    margin-bottom: .2rem;
+}
+
+@media (max-width: 820px) {
+  .accordion {
+    max-width: 70vw;
   }
-  
-  .accordion_article:hover > .accordion_title .accordion_icon,
-  .accordion_input:checked ~ .accordion_title .accordion_icon {
-    transform: rotate(45deg);
+
+  .accordion h1 {
+    font-size: 1rem;
   }
-  
-  .accordion_article:hover > .accordion_title > .accordion_content,
-  .accordion_input:checked ~ .accordion_title > .accordion_content {
-    height: 30vh;
-    opacity: 1;
-  }
-  
-  .accordion_article:hover > .accordion_title > .accordion_content img,
-  .accordion_input:checked ~ .accordion_title > .accordion_content img {
-    height: 100%;
-  }
-  
-  .accordion_input {
-    appearance: none;
-    display: none;
-  }
-  
-  .accordion_input:checked ~ .accordion_title {
-    color: rgb(22, 21, 21);
-  }
-  
+
   .accordion_title {
-    color: rgb(191, 24, 213);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }  
-  
-  .accordion_subtitle {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    border-radius: 20rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: calc(24px + 16 * (100vw / 1920));
+    font-size: .7rem;
   }
-  
+
   .accordion_icon {
-    visibility: hidden;
-    width: 1rem;
+    width: .8rem;
   }
-  
-  .accordion_content {
-    height: 0;
-    margin: .3rem;
-    opacity: 0;
+}
+
+@media (max-width: 320px) {
+  .accordion {
+    max-width: 90vw;
   }
-  
-  .accordion_content img {
-    height: 0;
-    margin: 0 auto;
-    width: 30rem;
+
+  .accordion h1 {
+    font-size: 1rem;
   }
-  
-  @media (max-width: 820px) {
-    .accordion {
-      max-width: 70vw;
-    }
-  
-    .accordion h1 {
-      font-size: 1rem;
-    }
-  
-    .accordion_title {
-      font-size: .7rem;
-    }
-  
-    .accordion_icon {
-      width: .8rem;
-    }
+
+  .accordion_title {
+    font-size: .6rem;
   }
-  
-  @media (max-width: 320px) {
-    .accordion {
-      max-width: 90vw;
-    }
-  
-    .accordion h1 {
-      font-size: 1rem;
-    }
-  
-    .accordion_title {
-      font-size: .6rem;
-    }
-  
-    .accordion_icon {
-      width: .6rem;
-    }
-  
-    .accordion_input:checked ~ .accordion_title > .accordion_content {
-      height: 30vh;
-    }
+
+  .accordion_icon {
+    width: .6rem;
   }
-  
+
+  .accordion_input:checked~.accordion_title>.accordion_content {
+    height: 30vh;
+  }
+}
