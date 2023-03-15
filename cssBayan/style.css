@@ -23,12 +23,10 @@
   margin-bottom: .2rem;
 }
 
-.accordion_article:hover>.accordion_title .accordion_icon,
 .accordion_input:checked~.accordion_title .accordion_icon {
   transform: rotate(45deg);
 }
 
-.accordion_article:hover>.accordion_title>.accordion_content,
 .accordion_input:checked~.accordion_title>.accordion_content {
   height: 30vh;
   opacity: 1;
@@ -83,10 +81,20 @@
 }
 
 @media (hover: hover) {
+
   .accordion:hover .accordion_icon,
   .accordion:hover .accordion_title {
     color: black;
     visibility: visible;
+  }
+
+  .accordion_article:hover>.accordion_title .accordion_icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion_article:hover>.accordion_title>.accordion_content {
+    height: 30vh;
+    opacity: 1;
   }
 }
 
