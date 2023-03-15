@@ -12,7 +12,7 @@
   margin: 0 auto;
   max-width: 50%;
   border-radius: 1rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8rem rgba(0, 0, 0, 0.2);
 }
 
 .accordion_header {
@@ -58,8 +58,8 @@
   justify-content: space-between;
   padding: 0 1rem;
   border-radius: 20rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: calc(24px + 16 * (100vw / 1920));
+  box-shadow: 0px 4rem 8rem rgba(0, 0, 0, 0.2);
+  font-size: 2rem
 }
 
 .accordion_icon {
@@ -106,8 +106,8 @@
     max-width: 70vw;
   }
 
-  .accordion h1 {
-    font-size: 1rem;
+  .accordion_subtitle {
+    font-size: 1.5rem;
   }
 
   .accordion_title {
@@ -124,7 +124,7 @@
     max-width: 90vw;
   }
 
-  .accordion h1 {
+  .accordion_subtitle {
     font-size: 1rem;
   }
 
