@@ -32,7 +32,6 @@
   opacity: 1;
 }
 
-.accordion_article:hover>.accordion_title>.accordion_content img,
 .accordion_input:checked~.accordion_title>.accordion_content img {
   height: 100%;
 }
@@ -95,6 +94,10 @@
   .accordion_article:hover>.accordion_title>.accordion_content {
     height: 30vh;
     opacity: 1;
+  }
+
+  .accordion_article:hover>.accordion_title>.accordion_content img {
+    height: 100%;
   }
 }
 
